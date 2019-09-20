@@ -1,0 +1,102 @@
+/*
+ * buttons
+ */
+ 
+.button {
+-fx-background-color: #4250e0;
+-fx-background-radius: 0;
+-fx-border-width: 0;
+-fx-border-color: #000000;
+-fx-border-radius: 40;
+-fx-text-fill: white;
+-fx-font-size: 15;
+}
+
+.buttonGreen {
+-fx-background-color: #66bb33;
+-fx-background-radius: 0;
+-fx-border-color: #888888;
+-fx-border-radius: 0;
+-fx-text-fill: white;
+-fx-font-size: 15;
+}
+
+.buttonExtra {
+-fx-background-color: #4250e0;
+-fx-border-color: #888888;
+-fx-background-radius: 0;
+-fx-border-radius: 0;
+-fx-text-fill: white;
+-fx-font-size: 15;
+}
+
+/*
+ * comboBox
+ */
+
+.comboBox {
+-fx-background-color: linear-gradient( from 0.0% 50.0% to 100.0% 50.0%, rgba(255,255,255,0.0) 0.0, rgba(255,255,255,0.3) 100.0);
+-fx-border-radius: 0;
+-fx-background-radius: 0;
+}
+
+.comboBox .cell{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+
+/*
+ * hamburger
+ */
+
+.jfx-hamburger StackPane{
+	-fx-background-color: #ffffff;
+	-fx-border-color: #00000033;
+}
+
+
+/*
+ * pane
+ */
+
+.greenPane {
+-fx-background-color:  #66bb33;
+}
+
+.header {
+-fx-background-color: #094AB2;
+}
+
+.header-text {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45; 
+	-fx-fill: white;
+}
+
+.header-text-encoding {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: #c2ff85;
+}
+
+.header-text-decoding {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: rgb(255,200,100);
+}
+
+.header-text-help {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: rgb(255,100,200);
+}
+
+.header-text-about {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: rgb(100,255,255);
+}
+
+.tab-header-background {
+    -fx-background-color: #4AA0FF;
+}

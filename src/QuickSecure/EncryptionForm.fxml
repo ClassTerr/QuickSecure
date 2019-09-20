@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.*?>
+<?import java.net.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="599.0" minWidth="700.0" prefHeight="599.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QuickSecure.EncryptionFormController">
+   <children>
+      <Pane layoutY="7.0" prefHeight="72.0" prefWidth="600.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="81.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-text" text="QuickSecure::" wrappingWidth="261.13671875">
+               <font>
+                  <Font name="Segoe UI Light" size="45.0" />
+               </font>
+            </Text>
+            <Text fill="#c2ff85" layoutX="338.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-text-encoding" text="encoding" wrappingWidth="281.0" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="15.0" layoutY="359.0" prefHeight="171.0" prefWidth="670.0" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <JFXTabPane fx:id="dataTab" focusTraversable="false" layoutX="-166.0" prefHeight="171.0" prefWidth="670.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Внедрить текст">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="dataTextField" layoutY="6.0" onDragDropped="#txtDragDropped" onDragOver="#txtDragOver" prefHeight="91.0" prefWidth="670.0" promptText="Текст для внедрения" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Label fx:id="textInfoLabel" alignment="CENTER" layoutY="97.0" prefHeight="14.0" prefWidth="670.0" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Выбрать файл для внедрения">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="filenamePane1" layoutX="15.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="87.0" prefWidth="637.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+                                 <children>
+                                    <TextField fx:id="dataFilenameTextField" layoutX="2.0" onDragDropped="#dataFilenameDragDropped" onDragOver="#dataFilenameDragOver" prefHeight="35.0" prefWidth="450.0" promptText="Имя файла" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <StackPane layoutX="-1.0" layoutY="43.0" prefHeight="51.0" prefWidth="670.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+                                       <children>
+                                          <JFXButton fx:id="openFileButton" focusTraversable="false" layoutY="35.0" onAction="#openDataFile" prefHeight="35.0" prefWidth="194.0" ripplerFill="BLACK" text="Указать файл" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+                                             <effect>
+                                                <Reflection fraction="0.25" topOpacity="0.27" />
+                                             </effect>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </StackPane>
+                                    <Label fx:id="fileInfoLabel" alignment="CENTER" layoutY="95.0" prefHeight="20.0" prefWidth="670.0" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="15.0" layoutY="84.0" prefHeight="275.0" prefWidth="670.0" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <JFXTabPane focusTraversable="false" prefHeight="259.0" prefWidth="637.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Изображение, в которое будет закодирована информация">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="filenamePane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="233.0" prefWidth="637.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="imageFilenameTextField" layoutY="1.0" onDragDropped="#dragDropped" onDragOver="#dragOver" prefHeight="35.0" prefWidth="637.0" promptText="Имя файла" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <AnchorPane layoutX="15.0" layoutY="49.0" minHeight="0.0" minWidth="0.0" prefHeight="181.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                       <children>
+                                          <GridPane fx:id="imagesGridPane" layoutX="14.0" layoutY="4.0" prefHeight="195.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane fx:id="anchPane1" minHeight="1.0" minWidth="1.0" prefHeight="151.0" prefWidth="304.0">
+                                                   <children>
+                                                      <ImageView fx:id="sourceImage" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                                                         <effect>
+                                                            <DropShadow height="30.0" radius="14.5" spread="0.3" width="30.0">
+                                                               <input>
+                                                                  <Reflection fraction="0.1" topOpacity="0.3" />
+                                                               </input>
+                                                            </DropShadow>
+                                                         </effect>
+                                                      </ImageView>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="anchPane2" minHeight="1.0" minWidth="1.0" prefHeight="228.0" prefWidth="386.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <ImageView fx:id="resultImage" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                                                         <effect>
+                                                            <DropShadow height="30.0" radius="14.5" spread="0.3" width="30.0">
+                                                               <input>
+                                                                  <Reflection fraction="0.1" topOpacity="0.3" />
+                                                               </input>
+                                                            </DropShadow>
+                                                         </effect>
+                                                      </ImageView>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </AnchorPane>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" percentWidth="100.0" prefWidth="0.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="0.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <AnchorPane fx:id="dropzonePane" minHeight="0.0" minWidth="0.0" prefHeight="205.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Rectangle fx:id="dropRectangle" fill="#ffffff00" height="115.0" stroke="BLACK" strokeWidth="0.0" width="637.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <AnchorPane fx:id="strokePane" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="400.0" style="-fx-border-style: segments(7);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Pane fx:id="centeringPane" layoutX="150.0" layoutY="10.0" prefHeight="88.0" prefWidth="303.0">
+                                                         <children>
+                                                            <ImageView fx:id="upDownArrow" fitHeight="42.0" fitWidth="42.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../Resources/DropArrow.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fx:id="upDownArrowBottomPart" fitHeight="60.0" fitWidth="55.0" layoutX="124.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../Resources/DropContainer.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Text layoutX="17.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Перетащите изображение или нажмите для загрузки">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane fx:id="dropPane" minHeight="0.0" minWidth="0.0" onDragDropped="#dragDropped" onDragEntered="#dragEntered" onDragExited="#dragExited" onDragOver="#dragOver" onMouseClicked="#openImage" prefHeight="215.0" prefWidth="621.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Pane>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <Label fx:id="imageInfoLabel" alignment="CENTER" layoutX="-15.0" layoutY="280.0" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="547.0" prefHeight="71.0" prefWidth="685.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="encodeButton" focusTraversable="false" layoutX="1.0" layoutY="1.0" onAction="#encode" prefHeight="40.0" prefWidth="134.0" ripplerFill="BLACK" styleClass="buttonGreen" text="Внедрить" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <Reflection fraction="0.25" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="copyButton" disable="true" focusTraversable="false" layoutX="385.0" layoutY="549.0" onAction="#copyToClipboard" prefHeight="40.0" prefWidth="177.0" ripplerFill="BLACK" text="Копировать результат" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="138.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <Reflection fraction="0.25" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="saveButton" disable="true" focusTraversable="false" layoutX="573.0" layoutY="549.0" onAction="#save" prefHeight="40.0" prefWidth="113.0" ripplerFill="BLACK" text="Сохранить" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <Reflection fraction="0.25" />
+               </effect>
+            </JFXButton>
+            <Text layoutX="163.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Бит полезной информации на канал " wrappingWidth="205.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="163.0" />
+            <JFXSlider fx:id="bitsCountSlider" blockIncrement="1.0" layoutX="162.0" layoutY="12.0" majorTickUnit="1.0" max="8.0" min="1.0" minorTickCount="0" prefHeight="38.0" prefWidth="205.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="162.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../design/application.css" />
+   </stylesheets>
+</AnchorPane>

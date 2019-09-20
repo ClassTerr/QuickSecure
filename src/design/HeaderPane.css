@@ -1,0 +1,33 @@
+.header {
+-fx-background-color: #094AB2;
+}
+
+.header-text {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45; 
+	-fx-fill: white;
+}
+
+.header-text-encoding {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: #c2ff85;
+}
+
+.header-text-decoding {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: rgb(255,100,100);
+}
+
+.header-text-help {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: rgb(255,100,200);
+}
+
+.header-text-about {
+	-fx-font-family: "Segoe UI Light";
+	-fx-font-size: 45;
+	-fx-fill: rgb(100,255,255);
+}

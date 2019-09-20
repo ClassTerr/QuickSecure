@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+
+<ScrollPane hbarPolicy="NEVER" minWidth="200.0" prefHeight="512.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QuickSecure.MenuController">
+   <content>
+      <VBox prefHeight="377.0" prefWidth="202.0">
+         <children>
+            <ImageView fx:id="image" disable="true" fitHeight="128.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Resources/Background.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="b1" buttonType="RAISED" maxHeight="74.0" minHeight="74.0" onAction="#encode" prefHeight="74.0" prefWidth="200.0" ripplerFill="#00fc00" style="-fx-background-color: #f1f1f1;" text="Внедрение информации" />
+            <JFXButton fx:id="b2" buttonType="RAISED" layoutX="10.0" layoutY="123.0" maxHeight="74.0" minHeight="74.0" onAction="#decode" prefHeight="74.0" prefWidth="200.0" ripplerFill="#0000fc" style="-fx-background-color: #f1f1f1;" text="Извлечение информации" />
+            <JFXButton fx:id="b3" buttonType="RAISED" layoutX="10.0" layoutY="197.0" maxHeight="74.0" minHeight="74.0" onAction="#help" prefHeight="74.0" prefWidth="200.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Помощь" />
+            <JFXButton fx:id="b31" buttonType="RAISED" maxHeight="74.0" minHeight="74.0" onAction="#about" prefHeight="74.0" prefWidth="200.0" ripplerFill="#ebfa00" style="-fx-background-color: #f1f1f1;" text="О программе" />
+            <JFXButton fx:id="exit" buttonType="RAISED" maxHeight="74.0" minHeight="74.0" onAction="#exit" prefHeight="74.0" prefWidth="200.0" ripplerFill="#fa00db" style="-fx-background-color: #f1f1f1;" text="Выход" />
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

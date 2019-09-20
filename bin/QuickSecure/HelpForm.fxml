@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.net.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="485.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QuickSecure.HelpFormController">
+   <children>
+      <Pane layoutY="7.0" prefHeight="72.0" prefWidth="600.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="81.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-text" text="QuickSecure::" wrappingWidth="261.13671875">
+               <font>
+                  <Font name="Segoe UI Light" size="45.0" />
+               </font>
+            </Text>
+            <Text fill="#c2ff85" layoutX="338.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-text-help" text="help" wrappingWidth="281.0" />
+         </children>
+      </Pane>
+      <TextArea fx:id="textArea" editable="false" layoutX="187.0" layoutY="83.0" prefHeight="387.0" prefWidth="431.0" text="В меню выбрать пункт &quot;Извлечение информации&quot;, загрузить полученное изображение и нажать на кнопку &quot;Извлечь&quot;. После чего можно посмотреть полученные данные в виде текста или изображения, а так же сохранить их на диск или скопировать в буфер обмена (в виде текста или изображения)." wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="83.0" />
+      <JFXButton layoutX="8.0" layoutY="83.0" onAction="#about" prefHeight="75.0" prefWidth="171.0" ripplerFill="BLACK" text="Что представляет собой программа?" textAlignment="CENTER" wrapText="true" />
+      <JFXButton layoutX="8.0" layoutY="168.0" onAction="#encode" prefHeight="75.0" prefWidth="171.0" ripplerFill="BLACK" text="Я хочу спрятать информацию, что делать?" textAlignment="CENTER" wrapText="true" />
+      <JFXButton layoutX="8.0" layoutY="253.0" onAction="#decode" prefHeight="75.0" prefWidth="171.0" ripplerFill="BLACK" text="Мне прислали изображение, как расшифровать?" textAlignment="CENTER" wrapText="true" />
+      <JFXButton layoutX="8.0" layoutY="335.0" onAction="#error" prefHeight="75.0" prefWidth="171.0" ripplerFill="BLACK" text="Почему программа не извлекает информацию?" textAlignment="CENTER" wrapText="true" />
+   </children>
+   <stylesheets>
+      <URL value="@../design/application.css" />
+   </stylesheets>
+</AnchorPane>
